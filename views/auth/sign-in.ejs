@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/sign.css" />
+    <title>Sign In page</title>
+</head>
+
+<body>
+    <h2>Welcome back 🛬 <br>Can't wait to hear about your new adventure </h2>
+    <form action="/auth/sign-in" method="POST">
+        <div>
+            <div>
+            <label for="username">Username:<label>
+                    <input type="text" name="username" id="username" required>
+            </div>
+            <div>
+            <label for="password">Password:<label>
+                    <input type="password" name="password" id="password" required>
+            </div>
+            <div class="btn">
+                    <button type="submit">Sign In</button>
+            </div>
+     </div>  
+     </form>
+</body>
+
+</html>

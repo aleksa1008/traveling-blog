@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet/main.css" />
+    <title>Main Page</title>
+  </head>
+  <body>
+    <%- include("partials/navBar.ejs") %>
+    <h1>Welcome back traveler</h1>
+      <div class="left">
+        <h2>Newest posts</h2>
+
+        <% if (posts && posts.length > 0) { %> <% posts.forEach(function(post) {
+        %>
+        <div class="post">
+          <% if (post.picture) { %>
+          <img
+            src="<%= post.picture %>"
+            alt="<%= post.title %>"
+          />
+          <% } %>
+          <h3><%= post.title %></h3>
+          <p><%= post.description %></p>
+          <p class="author">by <%= post.username %></p>
+
+          <% if (user && post.username === user.username) { %>
+          <div class="post-actions">
+            <a href="/auth/<%= user.username %>/edit/<%= post.id %>">Edit</a>
+
+            <form
+              action="/auth/<%= user.username %>/delete/<%= post.id %>?_method=DELETE"
+              method="POST"
+              style="display: inline"
+            >
+              <button type="submit">Delete</button>
+            </form>
+          </div>
+          <% } %>
+        </div>
+        <% }); %> <% } else { %>
+        <p>No posts yet</p>
+        <% } %>
+    </div>
+  </body>
+</html>
