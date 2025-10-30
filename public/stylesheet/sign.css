@@ -16,3 +16,22 @@ div {
   justify-content: center;
   margin: 0 auto;
 }
+
+@media (max-width: 450px){
+  .btn {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+div {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+}body {
+  text-align: center;
+  padding: 100px;
+  background-color: bisque;
+  margin-top: 150px;
+}
+}
