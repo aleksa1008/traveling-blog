@@ -2,6 +2,10 @@
 
 A full-stack web application where travelers can share their adventures and experiences with a community of fellow explorers. Users must register and sign in to access travel stories and share their own journeys.
 
+![Screenshot of the main page ](/main%20page%20ss.png "Screenshot")
+
+[Check it out Here](https://the-traveling-blog-8ba305d43e79.herokuapp.com/)
+
 ## 📋 Overview
 
 Travel Blog is a community-driven platform that allows registered users to:
